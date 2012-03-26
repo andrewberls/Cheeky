@@ -1,5 +1,6 @@
 //-- BASE GRID DEFINITIONS
 //------------------------------------
+
 .container {
   margin: 0 auto;
   overflow: auto;
@@ -26,6 +27,9 @@
 
 } // .row
 
+
+//-- Main columns
+//--------------------------
 .span-1  { width: $column_width; }
 .span-2  { width: 2*$column_width + 1*$gutter-width; }
 .span-3  { width: 3*$column_width + 2*$gutter-width; }
@@ -43,6 +47,10 @@
 .span-15 { width: 15*$column_width + 14*$gutter-width; }
 .span-16 { width: 16*$column_width + 15*$gutter-width; }
 
+
+
+//-- Offsets
+//--------------------------
 @mixin offset($colNum) {
   margin-left: $colNum*$column_width + $colNum*$gutter-width;;
 }
