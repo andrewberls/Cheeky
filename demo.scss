@@ -1,0 +1,18 @@
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+}
+
+.demo-row [class^="span-"] {
+  @include border-radius(3px);
+  background-color: #ccc;
+  text-align: center;
+  padding: 5px 0;
+}

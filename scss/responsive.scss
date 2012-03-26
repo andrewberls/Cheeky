@@ -1,0 +1,36 @@
+//-- RESPONSIVE MEDIA QUERIES
+//------------------------------------
+
+// Landscape phones and down
+@media (max-width: 480px) {}
+
+
+// Landscape phone to portrait tablet
+@media (max-width: 768px) {
+
+  body { padding: $gutter-width/4; }
+
+  .container { width: 100%; }
+
+  .row {
+    margin: 0;
+    outline: 1px solid green;
+    width: 100%;
+  }
+
+  [class^="span-"] {
+    clear: both;
+    margin: 0;
+    margin-bottom: $gutter-width;
+    width: 100%;
+  }
+
+} // @media (max-width: 768px)
+
+
+// Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 980px) {}
+
+
+// Large desktop and above
+@media (min-width: 1200px) {}

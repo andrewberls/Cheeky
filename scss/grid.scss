@@ -1,0 +1,64 @@
+//-- BASE GRID DEFINITIONS
+//------------------------------------
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  width: $container-width;
+}
+
+.row {
+  clear: both;
+  float: left;
+  margin-bottom: $gutter-width;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  [class^="span-"] {
+    float: left;
+    margin-right: $gutter-width;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+} // .row
+
+.span-1  { width: $column_width; }
+.span-2  { width: 2*$column_width + 1*$gutter-width; }
+.span-3  { width: 3*$column_width + 2*$gutter-width; }
+.span-4  { width: 4*$column_width + 3*$gutter-width; }
+.span-5  { width: 5*$column_width + 4*$gutter-width; }
+.span-6  { width: 6*$column_width + 5*$gutter-width; }
+.span-7  { width: 7*$column_width + 6*$gutter-width; }
+.span-8  { width: 8*$column_width + 7*$gutter-width; }
+.span-9  { width: 9*$column_width + 8*$gutter-width; }
+.span-10 { width: 10*$column_width + 9*$gutter-width; }
+.span-11 { width: 11*$column_width + 10*$gutter-width; }
+.span-12 { width: 12*$column_width + 11*$gutter-width; }
+.span-13 { width: 13*$column_width + 12*$gutter-width; }
+.span-14 { width: 14*$column_width + 13*$gutter-width; }
+.span-15 { width: 15*$column_width + 14*$gutter-width; }
+.span-16 { width: 16*$column_width + 15*$gutter-width; }
+
+@mixin offset($colNum) {
+  margin-left: $colNum*$column_width + $colNum*$gutter-width;;
+}
+
+.offset-1  { @include offset(1); }
+.offset-2  { @include offset(2); }
+.offset-3  { @include offset(3); }
+.offset-4  { @include offset(4); }
+.offset-5  { @include offset(5); }
+.offset-6  { @include offset(6); }
+.offset-7  { @include offset(7); }
+.offset-8  { @include offset(8); }
+.offset-9  { @include offset(9); }
+.offset-10 { @include offset(10); }
+.offset-11 { @include offset(11); }
+.offset-12 { @include offset(12); }
+.offset-13 { @include offset(13); }
+.offset-14 { @include offset(14); }
+.offset-15 { @include offset(15); }
