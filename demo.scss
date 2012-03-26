@@ -1,3 +1,18 @@
+//-- TEMPORARY STYLES
+//------------------------------------
+//.container {outline: 1px solid red;}
+//.row {outline: 1px solid green;}
+//[class^="span-"] {outline: 1px solid blue;}
+
+
+
+//-- VARIABLES
+//------------------------------------
+$col-bg: #ccc;
+
+
+//-- MIXINS
+//------------------------------------
 @mixin border-radius($radius: 5px) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -5,14 +20,25 @@
 }
 
 
+//-- MAIN
+//------------------------------------
 body {
+  color: #404040;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
 }
 
+h1 {
+  margin: 0;
+}
+
 .demo-row [class^="span-"] {
   @include border-radius(3px);
-  background-color: #ccc;
+  background-color: $col-bg;
   text-align: center;
   padding: 5px 0;
+
+  &:hover {
+    background-color: darken($col-bg, 10);
+  }
 }
