@@ -2,7 +2,7 @@
 //------------------------------------
 
 .container {
-  margin: 0 auto;
+  margin: 20px auto 40px;
   overflow: auto;
   width: $container-width;
 }
@@ -10,7 +10,7 @@
 .row {
   clear: both;
   float: left;
-  margin-bottom: $gutter-width;
+  margin-bottom: $gutter-width/2 + $gutter-width/4; // 20 -> 15
 
   &:last-child {
     margin-bottom: 0;
