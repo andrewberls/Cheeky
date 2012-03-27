@@ -60,6 +60,11 @@ h2 {
     margin-top: 0;
   }
 }
+h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 p {
   font-size: 1.1em;
@@ -80,13 +85,9 @@ strong {
 .tagline {
   color: darken($gray, 40);
   float: left;
-  font-size: 1.2em;
-  margin: 15px 10px 0;
+  font-size: 1.4em;
+  margin: 13px 15px 0;
 }
-
-/*.row p:last-child {
-  margin-bottom: 0;
-}*/
 
 .demo-row [class^="span-"] {
   // Gray columns for visualization
@@ -101,13 +102,19 @@ strong {
   }
 }
 
+.button-container {
+  text-align: center;
+}
+
 a.button {
   @include border-radius;
 
+  // Gray
   //background-color: lighten($gray, 15);
   //border: 1px solid $gray;
   //color: darken($gray, 40);
 
+  // Blue
   background-color: $linkColor;
   border: 1px solid lighten($linkColor, 5);
   color: white;
@@ -115,7 +122,7 @@ a.button {
   display: inline-block;
   font-size: 1.2em;
   font-weight: bold;
-  margin-top: 20px;
+  margin: 20px auto 0;
   padding: 15px;
 
   &:hover {
@@ -131,8 +138,8 @@ pre {
   @include border-radius;
   background-color: lighten($gray, 15);
   border: 1px solid $gray;
-  margin-top: 10px;
   padding: 10px 5px;
+  word-wrap: break-word;
 }
 
 code {
@@ -143,3 +150,38 @@ code {
   font-family: 'Courier New', Arial, Helvetica, sans-serif;
   padding: 1px 3px;
 }
+
+.footer {
+  border-top: 1px solid $gray;
+  margin-top: 25px;
+  padding-top: 10px;
+
+  p {
+    float: left;
+  }
+
+  .social-buttons {
+    // Github/Twitter embeds
+
+    float: right;
+
+    .twitter-follow-button {
+      margin-right: 15px;
+    }
+  }
+
+} // .footer
+
+
+
+
+//-- RESPONSIVE MEDIA QUERIES
+//------------------------------------
+@media (max-width: 768px) {
+
+.social-buttons {
+  float: left;
+}
+
+} // @media (max-width: 768px)
+
