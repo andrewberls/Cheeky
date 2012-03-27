@@ -8,8 +8,8 @@
 
 //-- VARIABLES
 //------------------------------------
-$col-bg: #ccc;
-
+$gray: #ccc;
+$linkColor: #08c;
 
 //-- MIXINS
 //------------------------------------
@@ -28,17 +28,94 @@ body {
   font-size: 13px;
 }
 
-h1 {
-  margin: 0;
+// Generic Typography
+//-------------------
+a:link,
+a:visited {
+  color: $linkColor;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 
+h1, h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  border-bottom: 1px solid $gray;
+  font-size: 2em;
+  margin-top: 20px;
+  padding-bottom: 5px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+strong {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.title {
+  float: left;
+  margin-bottom: 0;
+}
+
+.tagline {
+  color: darken($gray, 40);
+  float: left;
+  font-size: 1.2em;
+  margin: 15px 10px 0;
+}
+
+/*.row p:last-child {
+  margin-bottom: 0;
+}*/
+
 .demo-row [class^="span-"] {
+  // Gray columns for visualization
+
   @include border-radius(3px);
-  background-color: $col-bg;
+  background-color: $gray;
   text-align: center;
   padding: 5px 0;
 
   &:hover {
-    background-color: darken($col-bg, 10);
+    background-color: darken($gray, 10);
   }
+}
+
+pre {
+  // Code blocks
+
+  @include border-radius;
+  background-color: lighten($gray, 15);
+  border: 1px solid $gray;
+  margin-top: 10px;
+  padding: 10px 5px;
+}
+
+code {
+  // Inline code snippets
+
+  background-color: lighten($gray, 15);
+  border: 1px solid $gray;    
+  font-family: 'Courier New', Arial, Helvetica, sans-serif;
+  padding: 1px 3px;
 }

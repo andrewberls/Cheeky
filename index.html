@@ -18,8 +18,54 @@
 
     <div class="row">
       <div class="span-16">
-        <h1>Cheeky.css</h1>
+        <h1 class="title">Cheeky.css</h1>
+        <span class="tagline">The responsive grid with Sass.</span>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="span-16">
+        <p>
+          <strong>Cheeky is a responsive grid system built to stay out of your way.</strong>
+           There are many great CSS frameworks already out there, but if a page uses too many of the provided styles, it runs the risk of looking like every other page using that framework. Cheeky aims to change that by providing a minimal starting point for you to run with.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span-16">
+        <h2>Out of the Box</h2>
+        <p>Cheeky provides the absolute basics to build a responsive, grid-based layout. You won't find fancy forms or buttons done up for you. However, the included reset gives you a cross-browser baseline, and the grid system is simple and easy to work with.</p>
+
+        <h2>Getting Started</h2>
+        <p>Setting up Cheeky is easy! All you need to do is <a href="">download the stylesheet</a> and include it on your page.</p>
+<pre>
+  &lt;link rel="stylesheet" type="text/css" href="cheeky.min.css"&gt;
+</pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span-8">
+        <p>Everything in the Cheeky grid is contained in a 960px-wide container with 16 columns. This gives you flexibility to design your layout exactly the way you want it.</p>
+      </div>
+
+      <div class="span-8">
+        <strong>Sample Layout</strong>
+<pre>
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="span-8"&gt;Column&lt;/div&gt;
+      &lt;div class="span-8"&gt;Column&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <h2>Columns and offsets</h2>
+      <p>Columns are defined by adding a <code>.span-#</code> class to an element, where # is any number between 1 and 16. You can offset columns with an additional <code>.offset-#</code> class to space things out a bit. This page was built with Cheeky - resize the browser and check out the source to see how it all works!</p>
     </div>
 
     <div class="row demo-row">
@@ -47,6 +93,7 @@
     <div class="row demo-row">
       <div class="span-4">4</div>
       <div class="span-4 offset-2">4 offset 2</div>
+      <div class="span-4 offset-2">4 offset-2</div>
     </div>
   
 
@@ -73,8 +120,7 @@
 
     <div class="row demo-row">
       <div class="span-4">4</div>
-      <div class="span-4">4</div>
-      <div class="span-6">6</div>
+      <div class="span-6 offset-4">6 offset-4</div>
       <div class="span-2">2</div>
     </div>
 
