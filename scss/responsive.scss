@@ -32,11 +32,11 @@ body { padding: $gutter-width/4; }
 // Portrait tablet to landscape and desktop
 @media (min-width: 768px) and (max-width: 980px) {
 
-$column-width: 35px;
+//$column-width: 35px;
 $gutter-width: 10px;
 
 body {
-  padding: $gutter-width/4;
+  padding: $gutter-width;
 }
 
 .container {
@@ -44,6 +44,8 @@ body {
 }
 
 .row {
+  //outline: 1px solid green;
+  width: 100%;
 
   & > [class^="span-"] {
     //outline: 1px solid blue;
