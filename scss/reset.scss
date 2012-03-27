@@ -21,6 +21,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+// display:block for newer elements
 article,
 aside,
 details,
@@ -34,6 +35,23 @@ section {
   display: block;
 }
 
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Force a scrollbar to prevent jumps
 html {
   overflow-y: scroll;
 }
@@ -73,7 +91,6 @@ sub {
 
 // Img border in a's and image quality
 // -------------------------
-
 img {
   height: auto;
   border: 0;
