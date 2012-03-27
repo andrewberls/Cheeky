@@ -2,6 +2,6 @@
 //------------------------------------
 
 $num-columns: 16;
-$column_width: 40px;
+$column-width: 40px;
 $gutter-width: 20px;
-$container-width: ($num-columns * $column_width) + (($num-columns - 1) * $gutter-width);
+$container-width: ($num-columns * $column-width) + (($num-columns - 1) * $gutter-width);

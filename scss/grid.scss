@@ -30,29 +30,29 @@
 
 //-- Main columns
 //--------------------------
-.span-1  { width: $column_width; }
-.span-2  { width: 2*$column_width + 1*$gutter-width; }
-.span-3  { width: 3*$column_width + 2*$gutter-width; }
-.span-4  { width: 4*$column_width + 3*$gutter-width; }
-.span-5  { width: 5*$column_width + 4*$gutter-width; }
-.span-6  { width: 6*$column_width + 5*$gutter-width; }
-.span-7  { width: 7*$column_width + 6*$gutter-width; }
-.span-8  { width: 8*$column_width + 7*$gutter-width; }
-.span-9  { width: 9*$column_width + 8*$gutter-width; }
-.span-10 { width: 10*$column_width + 9*$gutter-width; }
-.span-11 { width: 11*$column_width + 10*$gutter-width; }
-.span-12 { width: 12*$column_width + 11*$gutter-width; }
-.span-13 { width: 13*$column_width + 12*$gutter-width; }
-.span-14 { width: 14*$column_width + 13*$gutter-width; }
-.span-15 { width: 15*$column_width + 14*$gutter-width; }
-.span-16 { width: 16*$column_width + 15*$gutter-width; }
+.span-1  { width: $column-width; }
+.span-2  { width: 2*$column-width + 1*$gutter-width; }
+.span-3  { width: 3*$column-width + 2*$gutter-width; }
+.span-4  { width: 4*$column-width + 3*$gutter-width; }
+.span-5  { width: 5*$column-width + 4*$gutter-width; }
+.span-6  { width: 6*$column-width + 5*$gutter-width; }
+.span-7  { width: 7*$column-width + 6*$gutter-width; }
+.span-8  { width: 8*$column-width + 7*$gutter-width; }
+.span-9  { width: 9*$column-width + 8*$gutter-width; }
+.span-10 { width: 10*$column-width + 9*$gutter-width; }
+.span-11 { width: 11*$column-width + 10*$gutter-width; }
+.span-12 { width: 12*$column-width + 11*$gutter-width; }
+.span-13 { width: 13*$column-width + 12*$gutter-width; }
+.span-14 { width: 14*$column-width + 13*$gutter-width; }
+.span-15 { width: 15*$column-width + 14*$gutter-width; }
+.span-16 { width: 16*$column-width + 15*$gutter-width; }
 
 
 
 //-- Offsets
 //--------------------------
 @mixin offset($colNum) {
-  margin-left: $colNum*$column_width + $colNum*$gutter-width;;
+  margin-left: $colNum*$column-width + $colNum*$gutter-width;;
 }
 
 .offset-1  { @include offset(1); }
