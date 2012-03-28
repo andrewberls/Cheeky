@@ -55,11 +55,8 @@ h2 {
   font-size: 2em;
   margin-top: 20px;
   padding-bottom: 5px;
-
-  // &:first-child {
-  //   margin-top: 0;
-  // }
 }
+
 h4 {
   font-size: 1.1em;
   font-weight: bold;
@@ -127,8 +124,8 @@ a.button {
   padding: 15px;
 
   &:hover {
-    //background-color: lighten($gray, 10);
-    background-color: lighten($linkColor, 10);
+    //background-color: lighten($gray, 10); // Gray
+    background-color: lighten($linkColor, 10); // Blue
     text-decoration: none;
   }
 }
@@ -139,6 +136,7 @@ pre {
   @include border-radius;
   background-color: lighten($gray, 15);
   border: 1px solid $gray;
+  font-family: 'Courier New', 'Helvetica Neue', Arial, sans-serif;
   margin-bottom: 15px;
   padding: 10px 5px;
   word-wrap: break-word;
