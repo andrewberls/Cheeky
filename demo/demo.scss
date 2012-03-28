@@ -5,7 +5,6 @@
 //[class^="span-"] {outline: 1px solid blue;}
 
 
-
 //-- VARIABLES
 //------------------------------------
 $gray: #ccc;
@@ -56,9 +55,9 @@ h2 {
   margin-top: 20px;
   padding-bottom: 5px;
 
-  &:first-child {
-    margin-top: 0;
-  }
+  // &:first-child {
+  //   margin-top: 0;
+  // }
 }
 h4 {
   font-size: 1.1em;
@@ -79,7 +78,7 @@ strong {
 
 .title {
   float: left;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .tagline {
@@ -95,6 +94,7 @@ strong {
   @include border-radius(3px);
   background-color: $gray;
   text-align: center;
+  margin-bottom: 15px;
   padding: 5px 0;
 
   &:hover {
@@ -138,6 +138,7 @@ pre {
   @include border-radius;
   background-color: lighten($gray, 15);
   border: 1px solid $gray;
+  margin-bottom: 15px;
   padding: 10px 5px;
   word-wrap: break-word;
 }
@@ -177,11 +178,16 @@ code {
 
 //-- RESPONSIVE MEDIA QUERIES
 //------------------------------------
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
 .tagline {
-  margin: 5px 0 10px;
+  margin: -10px 0 10px;
 }
+
+} // @media (max-width: 480px)
+
+
+@media (max-width: 768px) {
 
 .social-buttons {
   float: left;
