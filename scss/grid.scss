@@ -1,6 +1,10 @@
 //-- BASE GRID DEFINITIONS
 //------------------------------------
 
+//---------------------
+//-- Stacked columns
+//---------------------
+
 .container {
   margin: 20px auto 40px;
   overflow: auto;
@@ -30,31 +34,26 @@
 
 //-- Main columns
 //--------------------------
-.span-1  { width: $column-width; }
-.span-2  { width: 2*$column-width + 1*$gutter-width; }
-.span-3  { width: 3*$column-width + 2*$gutter-width; }
-.span-4  { width: 4*$column-width + 3*$gutter-width; }
-.span-5  { width: 5*$column-width + 4*$gutter-width; }
-.span-6  { width: 6*$column-width + 5*$gutter-width; }
-.span-7  { width: 7*$column-width + 6*$gutter-width; }
-.span-8  { width: 8*$column-width + 7*$gutter-width; }
-.span-9  { width: 9*$column-width + 8*$gutter-width; }
-.span-10 { width: 10*$column-width + 9*$gutter-width; }
-.span-11 { width: 11*$column-width + 10*$gutter-width; }
-.span-12 { width: 12*$column-width + 11*$gutter-width; }
-.span-13 { width: 13*$column-width + 12*$gutter-width; }
-.span-14 { width: 14*$column-width + 13*$gutter-width; }
-.span-15 { width: 15*$column-width + 14*$gutter-width; }
-.span-16 { width: 16*$column-width + 15*$gutter-width; }
-
+.span-1  { @include width(1); }
+.span-2  { @include width(2); }
+.span-3  { @include width(3); }
+.span-4  { @include width(4); }
+.span-5  { @include width(5); }
+.span-6  { @include width(6); }
+.span-7  { @include width(7); }
+.span-8  { @include width(8); }
+.span-9  { @include width(9); }
+.span-10 { @include width(10); }
+.span-11 { @include width(11); }
+.span-12 { @include width(12); }
+.span-13 { @include width(13); }
+.span-14 { @include width(14); }
+.span-15 { @include width(15); }
+.span-16 { @include width(16); }
 
 
 //-- Offsets
 //--------------------------
-@mixin offset($colNum) {
-  margin-left: $colNum*$column-width + $colNum*$gutter-width;;
-}
-
 .offset-1  { @include offset(1); }
 .offset-2  { @include offset(2); }
 .offset-3  { @include offset(3); }
@@ -69,4 +68,5 @@
 .offset-12 { @include offset(12); }
 .offset-13 { @include offset(13); }
 .offset-14 { @include offset(14); }
-.offset-15 { @include offset(15); }
+.offset-15 { @include offset(15); } 
+
