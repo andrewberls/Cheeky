@@ -17,7 +17,6 @@
 body { padding: $gutter-width/4; }
 
 .container {
-  outline: 1px solid #0fc;
   width: auto;
 }
 
@@ -51,7 +50,6 @@ body { padding: $gutter-width/4; }
 
 .row {
   margin-bottom: $small-gutter-width/2 + $small-gutter-width/4; // 20 -> 15
-  //width: 100%;
 
   [class^="span-"] {
     margin-right: $small-gutter-width;
