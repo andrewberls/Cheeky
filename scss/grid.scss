@@ -7,8 +7,15 @@
 
 .container {
   margin: 20px auto 40px;
-  overflow: auto;
   width: $container-width;
+}
+.container:before, 
+.container:after {
+  display: table;
+  content: "";
+}
+.container:after {
+  clear: both;
 }
 
 .row {
