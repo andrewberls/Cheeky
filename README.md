@@ -14,3 +14,6 @@ Setting up Cheeky is easy! All you need to do is [download the stylesheet](https
 Everything in the Cheeky grid is contained in a 960px-wide container with 16 columns inside rows. This gives you flexibility to design your layout exactly the way you want it.  
 
 Cheeky is built with Sass, so customizing it is as simple as changing a few variables. All of the source files are concatenated and minified using a build script, so the entire framework is only a few kilobytes.  
+
+## Demos
+A demo page containing more information and examples can be found [here](http://andrewberls.github.com/Cheeky/).
