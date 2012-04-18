@@ -8,11 +8,12 @@
 
 // Landscape phone to portrait tablet
 //------------------------------------
-@media (max-width: 768px) {
 
 //---------------------
 //-- Stacked columns
 //---------------------
+
+@media (max-width: 768px) {
 
 body { padding: $gutter-width/4; }
 
@@ -29,7 +30,8 @@ body { padding: $gutter-width/4; }
     margin: 0;    
     width: auto;
   }
-}
+
+} // .row
 
 } // @media (max-width: 768px)
 
