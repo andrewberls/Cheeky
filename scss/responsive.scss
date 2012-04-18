@@ -26,8 +26,7 @@ body { padding: $gutter-width/4; }
 
   & > [class^="span-"] {
     float: none;
-    margin: 0;
-    margin-bottom: $gutter-width;
+    margin: 0;    
     width: auto;
   }
 }
@@ -49,7 +48,6 @@ body { padding: $gutter-width/4; }
 }
 
 .row {
-  margin-bottom: $small-gutter-width/2 + $small-gutter-width/4; // 20 -> 15
 
   [class^="span-"] {
     margin-right: $small-gutter-width;
