@@ -1,0 +1,8 @@
+.nested-demo-row {
+  outline: 1px solid green;
+}
+
+.nested-demo-row > [class^="span-"] {
+  background-color: blue;
+  color: white;
+}
