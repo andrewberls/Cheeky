@@ -188,9 +188,20 @@ code {
 
 @media (max-width: 768px) {
 
+.row > [class^="span-"] {
+  margin-bottom: 20px;
+}
+
 .social-buttons {
   float: left;
 }
 
 } // @media (max-width: 768px)
 
+@media (min-width: 768px) and (max-width: 980px) {
+
+.row {
+  margin-bottom: 15px/2 + 15px/4;
+}
+
+} // @media (min-width: 768px) and (max-width: 980px)
