@@ -19,7 +19,7 @@
 }
 
 .row {
-  clear: both;
+  @include clearfix;
   float: left;
   margin-bottom: 0;
 

@@ -18,6 +18,7 @@ $small-container-width: ($num-columns * $small-column-width) + (($num-columns - 
 //-- GLOBAL MIXINS
 //------------------------------------
 
+// Grid System
 @mixin width($colNum) {
   width: ($colNum * $column-width) + (($colNum - 1)*$gutter-width);
 }
@@ -28,4 +29,17 @@ $small-container-width: ($num-columns * $small-column-width) + (($num-columns - 
 
 @mixin offset($colNum) {
   margin-left: $colNum*$column-width + $colNum*$gutter-width;;
+}
+
+// Miscellaneous
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
 }
