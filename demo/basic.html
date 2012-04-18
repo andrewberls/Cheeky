@@ -75,15 +75,43 @@
       <div class="span-2">2</div>
     </div>
 
+
     <h2>Nested spans</h2>
     <div class="row nested-demo-row">
       <div class="span-3">3</div>
       <div class="span-13">
         13
-        <div class="span-10" style="outline: 1px solid blue">10</div>
-        <div class="span-3" style="outline: 1px solid green">3</div>
+        <div class="row">
+          <div class="span-10">10</div>
+          <div class="span-3">3</div>
+        </div>
       </div>
     </div>
+
+
+    <h2>Demo</h2>
+    <div class="row">
+      <div class="span-12 offset-2 nested-wrapper">
+        <h1>Lorem Ipsum Dolor Sit Amet</h1>
+        <p>This is some top level content. This is some top level content.</p>
+        <div class="row">
+          <div class="span-4 nested-inner">
+            <h3>Small Header 1</h3>
+            <p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="span-4 nested-inner">
+            <h3>Small Header 1</h3>
+            <p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="span-4 nested-inner">
+            <h3>Small Header 1</h3>
+            <p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
   </div><!-- .container -->
 

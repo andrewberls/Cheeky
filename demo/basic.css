@@ -1,8 +1,34 @@
+/*.nested-demo-row, .nested-wrapper { outline: 1px solid red; }
+.nested-demo-row [class^="span-"], .nested-inner { outline: 1px solid blue; }*/
+
 .nested-demo-row {
-  outline: 1px solid green;
+  text-align: center;
 }
 
-.nested-demo-row > [class^="span-"] {
-  background-color: blue;
-  color: white;
+.nested-wrapper {
+  text-align: center;
+}
+  .nested-wrapper h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+
+.nested-inner h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.nested-inner p {
+  line-height: 1.1;
+}
+
+
+/*----------------------------------------
+
+  TODO: SHOULD THIS MAKE IT INTO THE PRODUCTION VERSION?
+
+----------------------------------------*/
+/* Adds some spacing to nested rows */
+.row .row {
+  margin-top: 10px;
 }

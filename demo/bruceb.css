@@ -1,7 +1,7 @@
 body {
   background-color: #ccc;
   font-family: 'Helvetiva Neue', Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .container {
@@ -41,7 +41,6 @@ body {
 
 .content {
   background-color: white;
-  font-size: 0.9em;
   line-height: 1.4;
   padding: 10px 0 20px;
 }
@@ -52,14 +51,25 @@ body {
     padding-bottom: 5px;
   }
     h2:first-child { margin-top: 0; }
+    h2 ~ p + p {
+      text-indent: 1.5em;
+    }
+
+  h3 {
+    border-bottom: 1px solid #369;
+    color: #369;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+  }
+    h3:first-child { margin-top: 0; }
+    h3 ~ p {
+      margin-left: 15px;
+    }
 
   p + p {
     margin-top: 10px;
-    text-indent: 1.5em;
-  }
-
-  .bullet-items {
-    background-color: red;
   }
 
 .footer {
@@ -69,3 +79,11 @@ body {
   padding: 5px 0;
   text-align: center;
 }
+
+
+.nested-row {
+  margin-top: 5px;
+}
+  .nested-row [class^="span-"] {
+    /*outline: 1px solid red;*/
+  }
