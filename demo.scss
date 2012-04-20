@@ -40,7 +40,7 @@ a:active {
   text-decoration: underline;
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0;
   margin-bottom: 15px;
   font-weight: bold;
@@ -55,6 +55,11 @@ h2 {
   font-size: 2em;
   margin-top: 20px;
   padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 5px;
 }
 
 h4 {
@@ -86,6 +91,10 @@ strong {
   margin: 13px 15px 0;
 }
 
+.example-container {
+  margin-top: 10px;
+}
+
 .demo-row [class^="span-"] {
   // Gray columns for visualization
 
@@ -101,6 +110,7 @@ strong {
 }
 
 .button-container {
+  margin-top: 25px;
   text-align: center;
 }
 
