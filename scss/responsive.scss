@@ -80,21 +80,21 @@ body { padding: $gutter-width/4; }
 
 //-- Offsets
 //---------------------
-.offset-1  { @include offset(1); }
-.offset-2  { @include offset(2); }
-.offset-3  { @include offset(3); }
-.offset-4  { @include offset(4); }
-.offset-5  { @include offset(5); }
-.offset-6  { @include offset(6); }
-.offset-7  { @include offset(7); }
-.offset-8  { @include offset(8); }
-.offset-9  { @include offset(9); }
-.offset-10 { @include offset(10); }
-.offset-11 { @include offset(11); }
-.offset-12 { @include offset(12); }
-.offset-13 { @include offset(13); }
-.offset-14 { @include offset(14); }
-.offset-15 { @include offset(15); }
+.offset-1  { @include small-offset(1); }
+.offset-2  { @include small-offset(2); }
+.offset-3  { @include small-offset(3); }
+.offset-4  { @include small-offset(4); }
+.offset-5  { @include small-offset(5); }
+.offset-6  { @include small-offset(6); }
+.offset-7  { @include small-offset(7); }
+.offset-8  { @include small-offset(8); }
+.offset-9  { @include small-offset(9); }
+.offset-10 { @include small-offset(10); }
+.offset-11 { @include small-offset(11); }
+.offset-12 { @include small-offset(12); }
+.offset-13 { @include small-offset(13); }
+.offset-14 { @include small-offset(14); }
+.offset-15 { @include small-offset(15); }
 
 } // @media (min-width: 768px) and (max-width: 980px)
 

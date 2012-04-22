@@ -31,6 +31,10 @@ $small-container-width: ($num-columns * $small-column-width) + (($num-columns - 
   margin-left: $colNum*$column-width + $colNum*$gutter-width;;
 }
 
+@mixin small-offset($colNum) {
+  margin-left: $colNum*$small-column-width + $colNum*$small-gutter-width;;
+}
+
 // Miscellaneous
 @mixin clearfix {
   *zoom: 1;
