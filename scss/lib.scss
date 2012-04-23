@@ -6,34 +6,55 @@ $num-columns: 16;
 
 $column-width: 50px;
 $small-column-width: 40px;
+$tiny-column-width: 30px;
 
 $gutter-width: 20px;
-$small-gutter-width: 15px;
+$small-gutter-width: 10px;
+$tiny-gutter-width: 10px;
 
 $container-width: ($num-columns * $column-width) + (($num-columns - 1) * $gutter-width);
 $small-container-width: ($num-columns * $small-column-width) + (($num-columns - 1) * $small-gutter-width);
+$tiny-container-width: ($num-columns * $tiny-column-width) + (($num-columns - 1) * $tiny-gutter-width);
 
 
 //------------------------------------
 //-- GLOBAL MIXINS
 //------------------------------------
 
-// Grid System
+//---------------------
+//-- Default
+//---------------------
 @mixin width($colNum) {
   width: ($colNum * $column-width) + (($colNum - 1)*$gutter-width);
-}
-
-@mixin small-width($colNum) {
-  width: ($colNum * $small-column-width) + (($colNum - 1)*$small-gutter-width);
 }
 
 @mixin offset($colNum) {
   margin-left: $colNum*$column-width + $colNum*$gutter-width;;
 }
 
+//---------------------
+//-- Small
+//---------------------
+@mixin small-width($colNum) {  
+  width: ($colNum * $small-column-width) + (($colNum - 1)*$small-gutter-width);
+}
+
 @mixin small-offset($colNum) {
   margin-left: $colNum*$small-column-width + $colNum*$small-gutter-width;;
 }
+
+//---------------------
+//-- Tiny
+//---------------------
+
+@mixin tiny-width($colNum) {  
+  width: ($colNum * $tiny-column-width) + (($colNum - 1)*$tiny-gutter-width);
+}
+
+@mixin tiny-offset($colNum) {
+  margin-left: $colNum*$tiny-column-width + $colNum*$tiny-gutter-width;;
+}
+
 
 // Miscellaneous
 @mixin clearfix {

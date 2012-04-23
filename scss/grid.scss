@@ -2,20 +2,13 @@
 //------------------------------------
 
 //---------------------
-//-- Stacked columns
+//-- 1100px grid
 //---------------------
 
 .container {
-  margin: 20px auto 40px;
+  @include clearfix;
+  margin: 0 auto;
   width: $container-width;
-}
-.container:before, 
-.container:after {
-  display: table;
-  content: "";
-}
-.container:after {
-  clear: both;
 }
 
 .row {
@@ -71,5 +64,4 @@
 .offset-12 { @include offset(12); }
 .offset-13 { @include offset(13); }
 .offset-14 { @include offset(14); }
-.offset-15 { @include offset(15); } 
-
+.offset-15 { @include offset(15); }
