@@ -1,6 +1,10 @@
 /*.nested-demo-row, .nested-wrapper { outline: 1px solid red; }
 .nested-demo-row [class^="span-"], .nested-inner { outline: 1px solid blue; }*/
 
+.container {
+  margin: 20px auto 40px;
+}
+
 .nested-demo-row {
   text-align: center;
 }

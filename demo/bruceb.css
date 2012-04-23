@@ -6,6 +6,7 @@ body {
 
 .container {
   background-color: white;
+  margin: 20px auto 40px;
 }
 
 .header {
