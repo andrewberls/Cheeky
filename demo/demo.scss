@@ -120,13 +120,6 @@ strong {
 
 a.button {
   @include border-radius;
-
-  // Gray
-  //background-color: lighten($gray, 15);
-  //border: 1px solid $gray;
-  //color: darken($gray, 40);
-
-  // Blue
   background-color: $linkColor;
   border: 1px solid lighten($linkColor, 5);
   color: white;
@@ -138,8 +131,7 @@ a.button {
   padding: 15px;
 
   &:hover {
-    //background-color: lighten($gray, 10); // Gray
-    background-color: lighten($linkColor, 10); // Blue
+    background-color: darken($linkColor, 5);
     text-decoration: none;
   }
 }
