@@ -30,15 +30,17 @@
 
 //-- Main columns
 //--------------------------
-@for $i from 1 to 16 {
-  // Ex: .span-5 { @include width(5) }
+@for $i from 1 to 17 {
+  // 1-16. Ex: .span-5 { @include width(5) }
+  @debug "width: #{$i}";
   .span-#{$i} { @include width($i); }
 }
 
 
 //-- Offsets
 //--------------------------
-@for $i from 1 to 15 {
-  // Ex: .offset-5 { @include offset(5) }
+@for $i from 1 to 16 {
+  // 1-15. Ex: .offset-5 { @include offset(5) }
+  @debug "offset: #{$i}";
   .offset-#{$i} { @include offset($i) }
 }

@@ -58,16 +58,18 @@
 
 //-- Main columns
 //---------------------
-@for $i from 1 to 16 {
-  // Ex: .span-5 { @include tiny-width(5) }
+@for $i from 1 to 17 {
+  // 1-16. Ex: .span-5 { @include tiny-width(5) }
+  @debug "tiny-width: #{$i}";
   .span-#{$i} { @include tiny-width($i) }
 }
 
 
 //-- Offsets
 //---------------------
-@for $i from 1 to 15 {
-  // Ex: .offset-5 { @include tiny-offset(5) }
+@for $i from 1 to 16 {
+  // 1-15. Ex: .offset-5 { @include tiny-offset(5) }
+  @debug "tiny-offset: #{$i}";
   .offset-#{$i} { @include tiny-offset($i) }
 }
 
@@ -99,33 +101,35 @@
 
 //-- Main columns
 //---------------------
-@for $i from 1 to 16 {
-  // Ex: .span-5 { @include small-width(5) }
-  .span-#{$i} { @include small-width($i) }
-}
+// @for $i from 1 to 17 {
+//   // 1-16. Ex: .span-5 { @include small-width(5) }
+//   @debug "small-width: #{$i}";
+//   .span-#{$i} { @include small-width($i); background-color: red !important; }
+// }
 
-// .span-1  { @include small-width(1); }
-// .span-2  { @include small-width(2); }
-// .span-3  { @include small-width(3); }
-// .span-4  { @include small-width(4); }
-// .span-5  { @include small-width(5); }
-// .span-6  { @include small-width(6); }
-// .span-7  { @include small-width(7); }
-// .span-8  { @include small-width(8); }
-// .span-9  { @include small-width(9); }
-// .span-10 { @include small-width(10); }
-// .span-11 { @include small-width(11); }
-// .span-12 { @include small-width(12); }
-// .span-13 { @include small-width(13); }
-// .span-14 { @include small-width(14); }
-// .span-15 { @include small-width(15); }
-// .span-16 { @include small-width(16); }
+.span-1  { @include small-width(1); }
+.span-2  { @include small-width(2); }
+.span-3  { @include small-width(3); }
+.span-4  { @include small-width(4); }
+.span-5  { @include small-width(5); }
+.span-6  { @include small-width(6); }
+.span-7  { @include small-width(7); }
+.span-8  { @include small-width(8); }
+.span-9  { @include small-width(9); }
+.span-10 { @include small-width(10); }
+.span-11 { @include small-width(11); }
+.span-12 { @include small-width(12); }
+.span-13 { @include small-width(13); }
+.span-14 { @include small-width(14); }
+.span-15 { @include small-width(15); }
+.span-16 { @include small-width(16); }
 
 
 //-- Offsets
 //---------------------
-@for $i from 1 to 15 {
-  // Ex: .span-5 { @include small-offset(5) }
+@for $i from 1 to 16 {
+  // 1-15. Ex: .span-5 { @include small-offset(5) }
+  @debug "small-offset: #{$i}";
   .span-#{$i} { @include small-offset($i) }
 }
 
