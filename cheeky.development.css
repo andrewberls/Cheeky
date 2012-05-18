@@ -118,16 +118,14 @@ textarea {
   vertical-align: top; }
 
 .container {
-  margin: 20px auto 40px;
+  *zoom: 1;
+  margin: 0 auto;
   width: 1100px; }
-
-.container:before,
-.container:after {
-  display: table;
-  content: ""; }
-
-.container:after {
-  clear: both; }
+  .container:before, .container:after {
+    display: table;
+    content: ""; }
+  .container:after {
+    clear: both; }
 
 .row {
   *zoom: 1;
@@ -237,10 +235,7 @@ textarea {
 .offset-15 {
   margin-left: 1050px; }
 
-@media (max-width: 768px) {
-  body {
-    padding: 5px; }
-
+@media (max-width: 480px) {
   .container {
     width: auto; }
 
@@ -251,102 +246,201 @@ textarea {
       float: none;
       margin: 0;
       width: auto; } }
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .container {
-    width: 865px; }
+    width: 630px; }
 
   .row [class^="span-"] {
-    margin-right: 15px; }
+    margin-right: 10px; }
+
+  .span-1 {
+    width: 30px; }
+
+  .span-2 {
+    width: 70px; }
+
+  .span-3 {
+    width: 110px; }
+
+  .span-4 {
+    width: 150px; }
+
+  .span-5 {
+    width: 190px; }
+
+  .span-6 {
+    width: 230px; }
+
+  .span-7 {
+    width: 270px; }
+
+  .span-8 {
+    width: 310px; }
+
+  .span-9 {
+    width: 350px; }
+
+  .span-10 {
+    width: 390px; }
+
+  .span-11 {
+    width: 430px; }
+
+  .span-12 {
+    width: 470px; }
+
+  .span-13 {
+    width: 510px; }
+
+  .span-14 {
+    width: 550px; }
+
+  .span-15 {
+    width: 590px; }
+
+  .span-16 {
+    width: 630px; }
+
+  .offset-1 {
+    margin-left: 40px; }
+
+  .offset-2 {
+    margin-left: 80px; }
+
+  .offset-3 {
+    margin-left: 120px; }
+
+  .offset-4 {
+    margin-left: 160px; }
+
+  .offset-5 {
+    margin-left: 200px; }
+
+  .offset-6 {
+    margin-left: 240px; }
+
+  .offset-7 {
+    margin-left: 280px; }
+
+  .offset-8 {
+    margin-left: 320px; }
+
+  .offset-9 {
+    margin-left: 360px; }
+
+  .offset-10 {
+    margin-left: 400px; }
+
+  .offset-11 {
+    margin-left: 440px; }
+
+  .offset-12 {
+    margin-left: 480px; }
+
+  .offset-13 {
+    margin-left: 520px; }
+
+  .offset-14 {
+    margin-left: 560px; }
+
+  .offset-15 {
+    margin-left: 600px; } }
+@media (min-width: 768px) and (max-width: 980px) {
+  .container {
+    width: 790px; }
+
+  .row [class^="span-"] {
+    margin-right: 10px; }
 
   .span-1 {
     width: 40px; }
 
   .span-2 {
-    width: 95px; }
+    width: 90px; }
 
   .span-3 {
-    width: 150px; }
+    width: 140px; }
 
   .span-4 {
-    width: 205px; }
+    width: 190px; }
 
   .span-5 {
-    width: 260px; }
+    width: 240px; }
 
   .span-6 {
-    width: 315px; }
+    width: 290px; }
 
   .span-7 {
-    width: 370px; }
+    width: 340px; }
 
   .span-8 {
-    width: 425px; }
+    width: 390px; }
 
   .span-9 {
-    width: 480px; }
+    width: 440px; }
 
   .span-10 {
-    width: 535px; }
+    width: 490px; }
 
   .span-11 {
-    width: 590px; }
+    width: 540px; }
 
   .span-12 {
-    width: 645px; }
+    width: 590px; }
 
   .span-13 {
-    width: 700px; }
+    width: 640px; }
 
   .span-14 {
-    width: 755px; }
+    width: 690px; }
 
   .span-15 {
-    width: 810px; }
+    width: 740px; }
 
   .span-16 {
-    width: 865px; }
+    width: 790px; }
 
   .offset-1 {
-    margin-left: 55px; }
+    margin-left: 50px; }
 
   .offset-2 {
-    margin-left: 110px; }
+    margin-left: 100px; }
 
   .offset-3 {
-    margin-left: 165px; }
+    margin-left: 150px; }
 
   .offset-4 {
-    margin-left: 220px; }
+    margin-left: 200px; }
 
   .offset-5 {
-    margin-left: 275px; }
+    margin-left: 250px; }
 
   .offset-6 {
-    margin-left: 330px; }
+    margin-left: 300px; }
 
   .offset-7 {
-    margin-left: 385px; }
+    margin-left: 350px; }
 
   .offset-8 {
-    margin-left: 440px; }
+    margin-left: 400px; }
 
   .offset-9 {
-    margin-left: 495px; }
+    margin-left: 450px; }
 
   .offset-10 {
-    margin-left: 550px; }
+    margin-left: 500px; }
 
   .offset-11 {
-    margin-left: 605px; }
+    margin-left: 550px; }
 
   .offset-12 {
-    margin-left: 660px; }
+    margin-left: 600px; }
 
   .offset-13 {
-    margin-left: 715px; }
+    margin-left: 650px; }
 
   .offset-14 {
-    margin-left: 770px; }
+    margin-left: 700px; }
 
   .offset-15 {
-    margin-left: 825px; } }
+    margin-left: 750px; } }
