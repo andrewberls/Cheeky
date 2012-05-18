@@ -58,41 +58,18 @@
 
 //-- Main columns
 //---------------------
-.span-1  { @include tiny-width(1); }
-.span-2  { @include tiny-width(2); }
-.span-3  { @include tiny-width(3); }
-.span-4  { @include tiny-width(4); }
-.span-5  { @include tiny-width(5); }
-.span-6  { @include tiny-width(6); }
-.span-7  { @include tiny-width(7); }
-.span-8  { @include tiny-width(8); }
-.span-9  { @include tiny-width(9); }
-.span-10 { @include tiny-width(10); }
-.span-11 { @include tiny-width(11); }
-.span-12 { @include tiny-width(12); }
-.span-13 { @include tiny-width(13); }
-.span-14 { @include tiny-width(14); }
-.span-15 { @include tiny-width(15); }
-.span-16 { @include tiny-width(16); }
+@for $i from 1 to 16 {
+  // Ex: .span-5 { @include tiny-width(5) }
+  .span-#{$i} { @include tiny-width($i) }
+}
 
 
 //-- Offsets
 //---------------------
-.offset-1  { @include tiny-offset(1); }
-.offset-2  { @include tiny-offset(2); }
-.offset-3  { @include tiny-offset(3); }
-.offset-4  { @include tiny-offset(4); }
-.offset-5  { @include tiny-offset(5); }
-.offset-6  { @include tiny-offset(6); }
-.offset-7  { @include tiny-offset(7); }
-.offset-8  { @include tiny-offset(8); }
-.offset-9  { @include tiny-offset(9); }
-.offset-10 { @include tiny-offset(10); }
-.offset-11 { @include tiny-offset(11); }
-.offset-12 { @include tiny-offset(12); }
-.offset-13 { @include tiny-offset(13); }
-.offset-14 { @include tiny-offset(14); }
-.offset-15 { @include tiny-offset(15); }
+@for $i from 1 to 15 {
+  // Ex: .offset-5 { @include tiny-offset(5) }
+  .offset-#{$i} { @include tiny-offset($i) }
+}
 
 } // @media (min-width: 480px) and (max-width: 768px)
 
@@ -122,41 +99,51 @@
 
 //-- Main columns
 //---------------------
-.span-1  { @include small-width(1); }
-.span-2  { @include small-width(2); }
-.span-3  { @include small-width(3); }
-.span-4  { @include small-width(4); }
-.span-5  { @include small-width(5); }
-.span-6  { @include small-width(6); }
-.span-7  { @include small-width(7); }
-.span-8  { @include small-width(8); }
-.span-9  { @include small-width(9); }
-.span-10 { @include small-width(10); }
-.span-11 { @include small-width(11); }
-.span-12 { @include small-width(12); }
-.span-13 { @include small-width(13); }
-.span-14 { @include small-width(14); }
-.span-15 { @include small-width(15); }
-.span-16 { @include small-width(16); }
+@for $i from 1 to 16 {
+  // Ex: .span-5 { @include small-width(5) }
+  .span-#{$i} { @include small-width($i) }
+}
+
+// .span-1  { @include small-width(1); }
+// .span-2  { @include small-width(2); }
+// .span-3  { @include small-width(3); }
+// .span-4  { @include small-width(4); }
+// .span-5  { @include small-width(5); }
+// .span-6  { @include small-width(6); }
+// .span-7  { @include small-width(7); }
+// .span-8  { @include small-width(8); }
+// .span-9  { @include small-width(9); }
+// .span-10 { @include small-width(10); }
+// .span-11 { @include small-width(11); }
+// .span-12 { @include small-width(12); }
+// .span-13 { @include small-width(13); }
+// .span-14 { @include small-width(14); }
+// .span-15 { @include small-width(15); }
+// .span-16 { @include small-width(16); }
 
 
 //-- Offsets
 //---------------------
-.offset-1  { @include small-offset(1); }
-.offset-2  { @include small-offset(2); }
-.offset-3  { @include small-offset(3); }
-.offset-4  { @include small-offset(4); }
-.offset-5  { @include small-offset(5); }
-.offset-6  { @include small-offset(6); }
-.offset-7  { @include small-offset(7); }
-.offset-8  { @include small-offset(8); }
-.offset-9  { @include small-offset(9); }
-.offset-10 { @include small-offset(10); }
-.offset-11 { @include small-offset(11); }
-.offset-12 { @include small-offset(12); }
-.offset-13 { @include small-offset(13); }
-.offset-14 { @include small-offset(14); }
-.offset-15 { @include small-offset(15); }
+@for $i from 1 to 15 {
+  // Ex: .span-5 { @include small-offset(5) }
+  .span-#{$i} { @include small-offset($i) }
+}
+
+// .offset-1  { @include small-offset(1); }
+// .offset-2  { @include small-offset(2); }
+// .offset-3  { @include small-offset(3); }
+// .offset-4  { @include small-offset(4); }
+// .offset-5  { @include small-offset(5); }
+// .offset-6  { @include small-offset(6); }
+// .offset-7  { @include small-offset(7); }
+// .offset-8  { @include small-offset(8); }
+// .offset-9  { @include small-offset(9); }
+// .offset-10 { @include small-offset(10); }
+// .offset-11 { @include small-offset(11); }
+// .offset-12 { @include small-offset(12); }
+// .offset-13 { @include small-offset(13); }
+// .offset-14 { @include small-offset(14); }
+// .offset-15 { @include small-offset(15); }
 
 } // @media (min-width: 768px) and (max-width: 980px)
 
