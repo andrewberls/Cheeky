@@ -10,12 +10,19 @@
 $gray: #ccc;
 $linkColor: #08c;
 
+
 //-- MIXINS
 //------------------------------------
 @mixin border-radius($radius: 5px) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
           border-radius: $radius;
+}
+
+@mixin ease-out($time: 0.5s) {
+  -webkit-transition: all $time ease-out;
+     -moz-transition: all $time ease-out;
+       -o-transition: all $time ease-out;
 }
 
 
@@ -31,6 +38,7 @@ body {
 .container {
   margin: 20px auto 40px;
 }
+
 
 // Generic Typography
 //-------------------
@@ -105,7 +113,6 @@ strong {
 
 .demo-row [class^="span-"] {
   // Gray columns for visualization
-
   @include border-radius(3px);
   background-color: $gray;
   text-align: center;
@@ -119,6 +126,7 @@ strong {
 
 .button-container {
   margin-top: 25px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -135,6 +143,7 @@ a.button {
   padding: 15px;
 
   &:hover {
+    @include ease-out(0.3s);
     background-color: darken($linkColor, 5);
     text-decoration: none;
   }
@@ -142,7 +151,6 @@ a.button {
 
 pre {
   // Code blocks
-
   @include border-radius;
   background-color: lighten($gray, 15);
   border: 1px solid $gray;
@@ -154,7 +162,6 @@ pre {
 
 code {
   // Inline code snippets
-
   background-color: lighten($gray, 15);
   border: 1px solid $gray;    
   font-family: 'Courier New', Arial, Helvetica, sans-serif;
@@ -172,7 +179,6 @@ code {
 
   .social-buttons {
     // Github/Twitter embeds
-
     float: right;
 
     .twitter-follow-button {
@@ -181,8 +187,6 @@ code {
   }
 
 } // .footer
-
-
 
 
 //-- RESPONSIVE MEDIA QUERIES
@@ -202,4 +206,18 @@ code {
   float: left;
 }
 
-} // @media (max-width: 768px)
+} // @media (max-width: 790px)
+
+
+@media (min-width: 1100px) {
+
+.button-container {
+  .button:first-of-type {
+    float: left;
+  }
+  .button:last-of-type {
+    float: right;
+  }
+}
+
+} // @media (min-width: 1100px)
