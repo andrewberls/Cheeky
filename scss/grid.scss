@@ -30,7 +30,7 @@
 
 //-- Main columns
 //--------------------------
-@for $i from 1 to 17 {
+@for $i from 1 through $num-columns {
   // 1-16. Ex: .span-5 { @include width(5) }
   .span-#{$i} { @include width($i); }
 }
@@ -38,7 +38,7 @@
 
 //-- Offsets
 //--------------------------
-@for $i from 1 to 16 {
+@for $i from 1 through ($num-columns - 1) {
   // 1-15. Ex: .offset-5 { @include offset(5) }
   .offset-#{$i} { @include offset($i) }
 }

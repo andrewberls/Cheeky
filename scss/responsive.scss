@@ -50,7 +50,7 @@
 
 //-- Main columns
 //---------------------
-@for $i from 1 to 17 {
+@for $i from 1 through $num-columns {
   // 1-16. Ex: .span-5 { @include tiny-width(5) }
   .span-#{$i} { @include tiny-width($i) }
 }
@@ -58,7 +58,7 @@
 
 //-- Offsets
 //---------------------
-@for $i from 1 to 16 {
+@for $i from 1 through ($num-columns - 1) {
   // 1-15. Ex: .offset-5 { @include tiny-offset(5) }
   .offset-#{$i} { @include tiny-offset($i) }
 }
@@ -87,7 +87,7 @@
 
 //-- Main columns
 //---------------------
-@for $i from 1 to 17 {
+@for $i from 1 through $num-columns {
   // 1-16. Ex: .span-5 { @include small-width(5) }
   .span-#{$i} { @include small-width($i); }
 }
@@ -95,7 +95,7 @@
 
 //-- Offsets
 //---------------------
-@for $i from 1 to 16 {
+@for $i from 1 through ($num-columns - 1) {
   // 1-15. Ex: .span-5 { @include small-offset(5) }
   .offset-#{$i} { @include small-offset($i) }
 }
