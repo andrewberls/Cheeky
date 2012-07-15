@@ -46,7 +46,6 @@ $tiny-container-width: ($num-columns * $tiny-column-width) + (($num-columns - 1)
 //---------------------
 //-- Tiny
 //---------------------
-
 @mixin tiny-width($colNum) {  
   width: ($colNum * $tiny-column-width) + (($colNum - 1)*$tiny-gutter-width);
 }

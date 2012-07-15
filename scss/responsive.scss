@@ -2,8 +2,6 @@
 //-- RESPONSIVE MEDIA QUERIES
 //------------------------------------
 
-// Landscape phones and down
-//------------------------------------
 
 //---------------------
 //-- Stacked columns
@@ -24,15 +22,11 @@
     margin: 0;    
     width: auto;
   }
+}
 
-} // .row
-
-} // @media (max-width: 480px)
-
+}
 
 
-// Landscape phone to portrait tablet
-//------------------------------------
 
 //---------------------
 //-- 630px grid
@@ -48,27 +42,19 @@
   margin-right: $tiny-gutter-width;
 }
 
-//-- Main columns
-//---------------------
 @for $i from 1 through $num-columns {
   // 1-16. Ex: .span-5 { @include tiny-width(5) }
   .span-#{$i} { @include tiny-width($i) }
 }
 
-
-//-- Offsets
-//---------------------
 @for $i from 1 through ($num-columns - 1) {
   // 1-15. Ex: .offset-5 { @include tiny-offset(5) }
   .offset-#{$i} { @include tiny-offset($i) }
 }
 
-} // @media (min-width: 480px) and (max-width: 768px)
+}
 
 
-
-// Portrait tablet to landscape and desktop
-//------------------------------------
 
 //---------------------
 //-- 940px grid
@@ -84,20 +70,15 @@
   margin-right: $small-gutter-width;
 }
 
-
-//-- Main columns
-//---------------------
 @for $i from 1 through $num-columns {
   // 1-16. Ex: .span-5 { @include small-width(5) }
   .span-#{$i} { @include small-width($i); }
 }
 
 
-//-- Offsets
-//---------------------
 @for $i from 1 through ($num-columns - 1) {
   // 1-15. Ex: .span-5 { @include small-offset(5) }
   .offset-#{$i} { @include small-offset($i) }
 }
 
-} // @media (min-width: 768px) and (max-width: 980px)
+}
