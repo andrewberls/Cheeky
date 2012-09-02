@@ -229,17 +229,17 @@ textarea {
     content: ""; }
   .row:after {
     clear: both; }
-  .row [class^="span-"] {
+  .row [class*="span-"] {
     float: left;
     margin-right: 20px; }
-    .row [class^="span-"]:last-child {
+    .row [class*="span-"]:last-child {
       margin-right: 0; }
 
 @media (min-width: 790px) and (max-width: 1100px) {
   .container {
     width: 790px; }
 
-  .row [class^="span-"] {
+  .row [class*="span-"] {
     margin-right: 10px; }
 
   .span-1 {
@@ -338,7 +338,7 @@ textarea {
   .container {
     width: 630px; }
 
-  .row [class^="span-"] {
+  .row [class*="span-"] {
     margin-right: 10px; }
 
   .span-1 {
@@ -440,7 +440,7 @@ textarea {
   .row {
     margin: 0;
     width: 100%; }
-    .row > [class^="span-"] {
+    .row > [class*="span-"] {
       float: none;
       margin: 0;
       width: auto; } }
