@@ -1,5 +1,7 @@
-CHEEKY_SCSS = scss/cheeky.scss
-CHEEKY_PRODUCTION = cheeky.min.css
+# Note: Building Cheeky requires Sass 3.2 or above
+
+CHEEKY_SCSS        = scss/cheeky.scss
+CHEEKY_PRODUCTION  = cheeky.min.css
 CHEEKY_DEVELOPMENT = cheeky.development.css
 
 production:
@@ -12,6 +14,3 @@ all: production development
 
 clean:
 	rm -f ${CHEEKY_PRODUCTION} ${CHEEKY_DEVELOPMENT}
-
-
-

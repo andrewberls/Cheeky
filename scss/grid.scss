@@ -1,7 +1,15 @@
 //-- BASE GRID DEFINITIONS
 //------------------------------------
 
-//---------------------
+@for $i from 1 through $num-columns {
+  .span-#{$i} { @include width($i); }
+}
+
+@for $i from 1 through $num-offsets {
+  .offset-#{$i} { @include offset($i); }
+}
+
+
 //-- 1100px grid
 //---------------------
 
@@ -19,7 +27,7 @@
   [class^="span-"] {
     float: left;
     margin-right: $gutter-width;
-    
+
     &:last-child {
       margin-right: 0;
     }
@@ -27,12 +35,73 @@
 
 }
 
-@for $i from 1 through $num-columns {
-  // 1-16. Ex: .span-5 { @include width(5) }
-  .span-#{$i} { @include width($i); }
+
+//-- 940px grid
+//---------------------
+
+@media (min-width: $small-boundary) and (max-width: $boundary) {
+
+  .container {
+    width: $small-container-width;
+  }
+
+  .row [class^="span-"] {
+    margin-right: $small-gutter-width;
+  }
+
+  @for $i from 1 through $num-columns {
+    .span-#{$i} { @include small-width($i); }
+  }
+
+  @for $i from 1 through $num-offsets {
+    .offset-#{$i} { @include small-offset($i) }
+  }
+
 }
 
-@for $i from 1 through ($num-columns - 1) {
-  // 1-15. Ex: .offset-5 { @include offset(5) }
-  .offset-#{$i} { @include offset($i) }
+
+//-- 630px grid
+//---------------------
+
+@media (min-width: $tiny-boundary) and (max-width: $small-boundary) {
+
+  .container {
+    width: $tiny-container-width;
+  }
+
+  .row [class^="span-"] {
+    margin-right: $tiny-gutter-width;
+  }
+
+  @for $i from 1 through $num-columns {
+    .span-#{$i} { @include tiny-width($i) }
+  }
+
+  @for $i from 1 through $num-offsets {
+    .offset-#{$i} { @include tiny-offset($i) }
+  }
+
+}
+
+
+//-- Stacked columns
+//---------------------
+
+@media (max-width: $tiny-boundary) {
+
+  .container {
+    width: auto;
+  }
+
+  .row {
+    margin: 0;
+    width: 100%;
+
+    & > [class^="span-"] {
+      float: none;
+      margin: 0;
+      width: auto;
+    }
+  }
+
 }

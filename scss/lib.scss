@@ -1,28 +1,31 @@
-//------------------------------------
 //-- GLOBAL VARIABLES
 //------------------------------------
 
 $num-columns: 16;
+$num-offsets: $num-columns - 1;
 
-$column-width: 50px;
+$boundary:       1100px;
+$small-boundary: 790px;
+$tiny-boundary:  630px;
+
+$column-width:       50px;
 $small-column-width: 40px;
-$tiny-column-width: 30px;
+$tiny-column-width:  30px;
 
-$gutter-width: 20px;
+$gutter-width:       20px;
 $small-gutter-width: 10px;
-$tiny-gutter-width: 10px;
+$tiny-gutter-width:  10px;
 
-$container-width: ($num-columns * $column-width) + (($num-columns - 1) * $gutter-width);
+$container-width:       ($num-columns * $column-width)       + (($num-columns - 1) * $gutter-width);
 $small-container-width: ($num-columns * $small-column-width) + (($num-columns - 1) * $small-gutter-width);
-$tiny-container-width: ($num-columns * $tiny-column-width) + (($num-columns - 1) * $tiny-gutter-width);
+$tiny-container-width:  ($num-columns * $tiny-column-width)  + (($num-columns - 1) * $tiny-gutter-width);
 
 
+
+//-- HELPER MIXINS
 //------------------------------------
-//-- GLOBAL MIXINS
-//------------------------------------
 
-//---------------------
-//-- Default
+// Default grid
 //---------------------
 @mixin width($colNum) {
   width: ($colNum * $column-width) + (($colNum - 1)*$gutter-width);
@@ -32,10 +35,10 @@ $tiny-container-width: ($num-columns * $tiny-column-width) + (($num-columns - 1)
   margin-left: $colNum*$column-width + $colNum*$gutter-width;;
 }
 
+
+// Small grid
 //---------------------
-//-- Small
-//---------------------
-@mixin small-width($colNum) {  
+@mixin small-width($colNum) {
   width: ($colNum * $small-column-width) + (($colNum - 1)*$small-gutter-width);
 }
 
@@ -43,10 +46,10 @@ $tiny-container-width: ($num-columns * $tiny-column-width) + (($num-columns - 1)
   margin-left: $colNum*$small-column-width + $colNum*$small-gutter-width;;
 }
 
+
+// Tiny grid
 //---------------------
-//-- Tiny
-//---------------------
-@mixin tiny-width($colNum) {  
+@mixin tiny-width($colNum) {
   width: ($colNum * $tiny-column-width) + (($colNum - 1)*$tiny-gutter-width);
 }
 
@@ -55,7 +58,9 @@ $tiny-container-width: ($num-columns * $tiny-column-width) + (($num-columns - 1)
 }
 
 
+
 // Miscellaneous
+//---------------------
 @mixin clearfix {
   *zoom: 1;
   &:before,
