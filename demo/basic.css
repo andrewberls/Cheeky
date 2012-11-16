@@ -1,12 +1,5 @@
-/*.nested-demo-row, .nested-wrapper { outline: 1px solid red; }
-.nested-demo-row [class^="span-"], .nested-inner { outline: 1px solid blue; }*/
-
 .container {
   margin: 20px auto 40px;
-}
-
-.nested-demo-row {
-  text-align: center;
 }
 
 .nested-wrapper {
@@ -17,14 +10,22 @@
     margin-bottom: 5px;
   }
 
-.nested-inner h3 {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-bottom: 5px;
+.nested-inner {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+  border: 1px dashed #A5A5A5;
+  padding: 5px;
 }
-.nested-inner p {
-  line-height: 1.1;
-}
+  .nested-inner h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .nested-inner p {
+    line-height: 1.1;
+  }
 
 
 /*----------------------------------------
