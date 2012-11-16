@@ -117,6 +117,31 @@ textarea {
   overflow: auto;
   vertical-align: top; }
 
+.container {
+  *zoom: 1;
+  margin: 0 auto;
+  width: 1100px; }
+  .container:before, .container:after {
+    display: table;
+    content: ""; }
+  .container:after {
+    clear: both; }
+
+.row {
+  *zoom: 1;
+  float: left;
+  margin-bottom: 0; }
+  .row:before, .row:after {
+    display: table;
+    content: ""; }
+  .row:after {
+    clear: both; }
+  .row [class*="span-"] {
+    float: left;
+    margin-right: 20px; }
+    .row [class*="span-"]:last-child {
+      margin-right: 0; }
+
 .span-1 {
   width: 50px; }
 
@@ -209,31 +234,6 @@ textarea {
 
 .offset-15 {
   margin-left: 1050px; }
-
-.container {
-  *zoom: 1;
-  margin: 0 auto;
-  width: 1100px; }
-  .container:before, .container:after {
-    display: table;
-    content: ""; }
-  .container:after {
-    clear: both; }
-
-.row {
-  *zoom: 1;
-  float: left;
-  margin-bottom: 0; }
-  .row:before, .row:after {
-    display: table;
-    content: ""; }
-  .row:after {
-    clear: both; }
-  .row [class*="span-"] {
-    float: left;
-    margin-right: 20px; }
-    .row [class*="span-"]:last-child {
-      margin-right: 0; }
 
 @media (min-width: 790px) and (max-width: 1100px) {
   .container {

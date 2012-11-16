@@ -1,22 +1,10 @@
-//-- BASE GRID DEFINITIONS
-//------------------------------------
-
-@for $i from 1 through $num-columns {
-  .span-#{$i} { @include width($i); }
-}
-
-@for $i from 1 through $num-offsets {
-  .offset-#{$i} { @include offset($i); }
-}
-
-
-//-- 1100px grid
-//---------------------
-
+//-----------------------
+// Base definitions
+//-----------------------
 .container {
   @include clearfix;
   margin: 0 auto;
-  width: $container-width;
+  width: $large-container-width;
 }
 
 .row {
@@ -26,7 +14,7 @@
 
   [class*="span-"] {
     float: left;
-    margin-right: $gutter-width;
+    margin-right: $large-gutter-width;
 
     &:last-child {
       margin-right: 0;
@@ -36,10 +24,23 @@
 }
 
 
-//-- 940px grid
-//---------------------
+//-----------------------
+// 1100px grid
+//-----------------------
+@for $colNum from 1 through $num-columns {
+  .span-#{$colNum} { @include width($colNum, $large-column-width, $large-gutter-width) }
+}
 
-@media (min-width: $small-boundary) and (max-width: $boundary) {
+@for $colNum from 1 through $num-offsets {
+  .offset-#{$colNum} { @include offset($colNum, $large-column-width, $large-gutter-width) }
+}
+
+
+
+//-----------------------
+// 940px grid
+//-----------------------
+@media (min-width: $small-boundary) and (max-width: $large-boundary) {
 
   .container {
     width: $small-container-width;
@@ -49,20 +50,20 @@
     margin-right: $small-gutter-width;
   }
 
-  @for $i from 1 through $num-columns {
-    .span-#{$i} { @include small-width($i); }
+  @for $colNum from 1 through $num-columns {
+    .span-#{$colNum} { @include width($colNum, $small-column-width, $small-gutter-width) }
   }
 
-  @for $i from 1 through $num-offsets {
-    .offset-#{$i} { @include small-offset($i) }
+  @for $colNum from 1 through $num-offsets {
+    .offset-#{$colNum} { @include offset($colNum, $small-column-width, $small-gutter-width) }
   }
 
 }
 
 
-//-- 630px grid
-//---------------------
-
+//-----------------------
+// 630px grid
+//-----------------------
 @media (min-width: $tiny-boundary) and (max-width: $small-boundary) {
 
   .container {
@@ -73,20 +74,20 @@
     margin-right: $tiny-gutter-width;
   }
 
-  @for $i from 1 through $num-columns {
-    .span-#{$i} { @include tiny-width($i) }
+  @for $colNum from 1 through $num-columns {
+    .span-#{$colNum} { @include width($colNum, $tiny-column-width, $tiny-gutter-width) }
   }
 
-  @for $i from 1 through $num-offsets {
-    .offset-#{$i} { @include tiny-offset($i) }
+  @for $colNum from 1 through $num-offsets {
+    .offset-#{$colNum} { @include offset($colNum, $tiny-column-width, $tiny-gutter-width) }
   }
 
 }
 
 
-//-- Stacked columns
-//---------------------
-
+//-----------------------
+// Stacked columns
+//-----------------------
 @media (max-width: $tiny-boundary) {
 
   .container {

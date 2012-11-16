@@ -1,66 +1,37 @@
-//-- GLOBAL VARIABLES
-//------------------------------------
-
+//-----------------------
+// Global variables
+//-----------------------
 $num-columns: 16;
 $num-offsets: $num-columns - 1;
 
-$boundary:       1100px;
+$large-boundary: 1100px;
 $small-boundary: 790px;
 $tiny-boundary:  630px;
 
-$column-width:       50px;
+$large-column-width: 50px;
 $small-column-width: 40px;
 $tiny-column-width:  30px;
 
-$gutter-width:       20px;
+$large-gutter-width: 20px;
 $small-gutter-width: 10px;
 $tiny-gutter-width:  10px;
 
-$container-width:       ($num-columns * $column-width)       + (($num-columns - 1) * $gutter-width);
+$large-container-width: ($num-columns * $large-column-width) + (($num-columns - 1) * $large-gutter-width);
 $small-container-width: ($num-columns * $small-column-width) + (($num-columns - 1) * $small-gutter-width);
 $tiny-container-width:  ($num-columns * $tiny-column-width)  + (($num-columns - 1) * $tiny-gutter-width);
 
 
-
-//-- HELPER MIXINS
-//------------------------------------
-
-// Default grid
-//---------------------
-@mixin width($colNum) {
-  width: ($colNum * $column-width) + (($colNum - 1)*$gutter-width);
+//-----------------------
+// Helpers
+//-----------------------
+@mixin width($colNum, $width, $gutter) {
+  width: ($colNum * $width) + (($colNum - 1) * $gutter);
 }
 
-@mixin offset($colNum) {
-  margin-left: $colNum*$column-width + $colNum*$gutter-width;;
+@mixin offset($colNum, $width, $gutter) {
+  margin-left: ($colNum * $width) + ($colNum * $gutter);
 }
 
-
-// Small grid
-//---------------------
-@mixin small-width($colNum) {
-  width: ($colNum * $small-column-width) + (($colNum - 1)*$small-gutter-width);
-}
-
-@mixin small-offset($colNum) {
-  margin-left: $colNum*$small-column-width + $colNum*$small-gutter-width;;
-}
-
-
-// Tiny grid
-//---------------------
-@mixin tiny-width($colNum) {
-  width: ($colNum * $tiny-column-width) + (($colNum - 1)*$tiny-gutter-width);
-}
-
-@mixin tiny-offset($colNum) {
-  margin-left: $colNum*$tiny-column-width + $colNum*$tiny-gutter-width;;
-}
-
-
-
-// Miscellaneous
-//---------------------
 @mixin clearfix {
   *zoom: 1;
   &:before,
