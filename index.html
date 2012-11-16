@@ -106,8 +106,17 @@
         <div class="span-4">4</div>
       </div>
 
-      <div class="row demo-row">
-        <div class="span-16">16</div>
+      <div class="row demo-row nested-parent">
+        <div class="span-16">
+          <div class="nested-number">16</div>
+
+          <div class="row nested-demo-row">
+            <div class="span-4">Nested 4</div>
+            <div class="span-4">Nested 4</div>
+            <div class="span-8">Nested 8</div>
+          </div>
+
+        </div>
       </div>
 
       <div class="row demo-row">
@@ -157,9 +166,6 @@
     </div>
 
   </div><!-- .container -->
-
-  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
 
 </body>
 </html>

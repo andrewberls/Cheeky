@@ -1,19 +1,11 @@
-//-- TEMPORARY STYLES
-//------------------------------------
-//.container {outline: 1px solid red;}
-//.row {outline: 1px solid green;}
-//[class^="span-"] {outline: 1px solid blue;}
-
-
-//-- VARIABLES
-//------------------------------------
-$gray: #ccc;
+//-----------------------
+// Helpers
+//-----------------------
+$gray:      #ccc;
+$darkGray:  #404040;
 $linkColor: #08c;
 
-
-//-- MIXINS
-//------------------------------------
-@mixin border-radius($radius: 5px) {
+@mixin border-radius($radius: 3px) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
           border-radius: $radius;
@@ -26,11 +18,13 @@ $linkColor: #08c;
 }
 
 
-//-- MAIN
-//------------------------------------
+
+//-----------------------
+// Main
+//-----------------------
 body {
   background-color: #fafafa;
-  color: #404040;
+  color: $darkGray;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
 }
@@ -40,8 +34,8 @@ body {
 }
 
 
-// Generic Typography
-//-------------------
+// Typography
+//-----------------
 a:link,
 a:visited {
   color: $linkColor;
@@ -95,9 +89,7 @@ strong {
   float: left;
   margin-bottom: 15px;
 
-  a {
-    color: #404040;
-  }
+  a { color: $darkGray; }
 }
 
 .tagline {
@@ -107,13 +99,16 @@ strong {
   margin: 13px 15px 0;
 }
 
+
+// Page Elements
+//-----------------
 .example-container {
   margin-top: 10px;
 }
 
 .demo-row [class^="span-"] {
   // Gray columns for visualization
-  @include border-radius(3px);
+  @include border-radius;
   background-color: $gray;
   text-align: center;
   margin-bottom: 15px;
@@ -122,6 +117,16 @@ strong {
   &:hover {
     background-color: darken($gray, 10);
   }
+}
+
+.nested-parent > [class^="span-"] {
+  padding: 5px 0 0;
+}
+
+.nested-demo-row [class^="span-"] {
+  background-color: darken($gray, 12);
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 .button-container {
@@ -135,7 +140,6 @@ a.button {
   background-color: $linkColor;
   border: 1px solid lighten($linkColor, 5);
   color: white;
-
   display: inline-block;
   font-size: 1.2em;
   font-weight: bold;
@@ -163,7 +167,7 @@ pre {
 code {
   // Inline code snippets
   background-color: lighten($gray, 15);
-  border: 1px solid $gray;    
+  border: 1px solid $gray;
   font-family: 'Courier New', Arial, Helvetica, sans-serif;
   padding: 1px 3px;
 }
@@ -173,9 +177,7 @@ code {
   margin-top: 25px;
   padding-top: 10px;
 
-  p {
-    float: left;
-  }
+  p { float: left; }
 
   .social-buttons {
     // Github/Twitter embeds
@@ -186,38 +188,31 @@ code {
     }
   }
 
-} // .footer
-
-
-//-- RESPONSIVE MEDIA QUERIES
-//------------------------------------
-@media (max-width: 480px) {
-
-.tagline {
-  margin: -10px 0 10px;
 }
 
-} // @media (max-width: 480px)
+
+
+// Queries
+//-----------------
+@media (max-width: 480px) {
+  .tagline { margin: -10px 0 10px; }
+}
 
 
 @media (max-width: 790px) {
-
-.social-buttons {
-  float: left;
+  .social-buttons { float: left; }
 }
-
-} // @media (max-width: 790px)
 
 
 @media (min-width: 1100px) {
 
-.button-container {
-  .button:first-of-type {
-    float: left;
+  .button-container {
+    .button:first-of-type {
+      float: left;
+    }
+    .button:last-of-type {
+      float: right;
+    }
   }
-  .button:last-of-type {
-    float: right;
-  }
-}
 
-} // @media (min-width: 1100px)
+}
