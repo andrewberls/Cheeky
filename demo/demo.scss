@@ -123,9 +123,11 @@ strong {
 }
 
 .nested-demo-row [class^="span-"] {
-  background-color: darken($gray, 12);
+  background-color: darken($gray, 15);
   margin-bottom: 0;
   margin-top: 5px;
+
+  &:hover { background-color: darken($gray, 17); }
 }
 
 .button-container {
