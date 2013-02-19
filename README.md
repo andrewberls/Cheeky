@@ -5,7 +5,7 @@ __Cheeky is a responsive grid system built to stay out of your way.__ There are 
 Cheeky provides the basic elements needed to build a responsive, grid-based layout. You won't find fancy forms or buttons done up for you here. However, the included reset gives you a cross-browser baseline, and the grid system is simple and easy to work with.
 
 ## Getting Started
-Setting up Cheeky is easy! All you need to do is [download the stylesheet](https://github.com/andrewberls/Cheeky/downloads) and include it on your page.
+Setting up Cheeky is easy! All you need to do is [download the stylesheet](https://raw.github.com/andrewberls/Cheeky/master/cheeky.min.css) and include it on your page.
 
 ```css
 <link rel="stylesheet" type="text/css" href="cheeky.min.css">
