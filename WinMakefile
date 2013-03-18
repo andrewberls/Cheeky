@@ -1,1 +1,0 @@
-sass 'scss/cheeky.scss':cheeky.min.css --style compressed
