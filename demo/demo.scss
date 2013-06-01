@@ -160,10 +160,10 @@ pre {
   // Code blocks
   @include border-radius;
   background-color: lighten($gray, 15);
-  border: 1px solid $gray;
+  border: 1px solid $gray !important;
   font-family: 'Courier New', 'Helvetica Neue', Arial, sans-serif;
   margin-bottom: 15px;
-  padding: 10px 5px;
+  padding: 10px 5px !important;
   word-wrap: break-word;
 }
 
