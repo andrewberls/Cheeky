@@ -1,5 +1,5 @@
 body {
-  background-color: #ccc;
+  background-color: #DDDDDD;
   font-family: 'Helvetiva Neue', Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
@@ -23,7 +23,7 @@ body {
   background-color: #eee;
 }
   .nav a:link,
-  .nav a:visited {    
+  .nav a:visited {
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #fff;
     color: #369;
@@ -45,8 +45,11 @@ body {
   line-height: 1.4;
   padding: 10px 0 20px;
 }
-  h2 {
+  h2, h3, h4 {
     color: #369;
+  }
+
+  h2 {
     font-size: 1.5em;
     margin-top: 15px;
     padding-bottom: 5px;
@@ -58,20 +61,22 @@ body {
 
   h3 {
     border-bottom: 1px solid #369;
-    color: #369;
     font-size: 1.2em;
-    margin-top: 10px;
+    /*margin: 10px 0 5px;*/
     margin-bottom: 5px;
     padding-bottom: 2px;
   }
-    h3:first-child { margin-top: 0; }
     h3 ~ p {
       margin-left: 15px;
+      margin-bottom: 10px;
     }
 
-  p + p {
-    margin-top: 10px;
+  h4 {
+    font-size: 1.1em;
   }
+
+
+  p + p { margin-top: 10px; }
 
 .footer {
   background-color: #369;
@@ -82,9 +87,18 @@ body {
 }
 
 
-.nested-row {
-  margin-top: 5px;
+.nested-row { margin-top: 20px; }
+
+img {
+  border: 1px solid #999;
+  border-right: none;
+  display: block;
+  max-width: 100%;
 }
-  .nested-row [class^="span-"] {
-    /*outline: 1px solid red;*/
+
+@media(max-width: 730px) {
+  img { margin: 0 auto; }
+  .content {
+    padding: 5px 8px;
   }
+}
